@@ -1,0 +1,43 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section">
+    <view class="inrow" wx:if="{{ifStudent}}">
+    <view class="margin-right">学生姓名</view>
+    <input name="input" placeholder="例如王勤" />
+     
+    </view>
+    <view class="inrow" wx:if="{{ifTeacher}}">
+    <view class="margin-right">教师姓名</view>
+      <input name="input" placeholder="例如王老师" />
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="inrow">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="inrow">
+          <view class="margin-right">区域</view><view class="remarks">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+
+  <block wx:for="{{userinfo}}">
+    <view class="section">
+      <view class="inrow">
+      <view class="margin-right">{{item.title}}</view>
+      
+        <input name="input" placeholder="{{item.holderTitle}}" />
+      </view>
+    </view>
+  </block>
+
+
+  <view class="section">
+    <button formType="submit">提交</button>
+     </view>
+     <view class="section">
+    <button formType="reset">重置</button>
+ </view>
+</form>

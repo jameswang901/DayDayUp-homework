@@ -1,0 +1,14 @@
+Page{
+  background-color: #888888
+}
+.section{
+  background-color: white;
+  margin-bottom: 10rpx;
+}
+.margin-right{
+  width: 200rpx;
+  margin-right: 10rpx;
+}
+.remarks{
+  color: #888888
+}
